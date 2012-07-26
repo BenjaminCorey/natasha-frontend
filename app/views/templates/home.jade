@@ -1,0 +1,78 @@
+header#header
+  .container
+    h1.logo Rock the Vote
+
+section#banner
+  .container
+    .row
+      nav.socialnav.span12
+        ul.nav.nav-pills
+          li.avatar: img(src="", alt="Avatar")
+          li.email: a(href="#email") Email
+          li.twitter: a(href="#twitter") Tweet
+          li.facebook: a(href="#facebook") Share
+          li.dropdown: a(href="#more", class="dropdown-toggle", data-toggle="dropdown") More
+            i.caret
+            ul.dropdown-menu
+              li.pinterest: a(href="#pinterest") Pin it
+              li.myspace: a(href="#myspace") Share on MySpace
+      
+      div.points.span3
+        p You Have
+        p#points 120
+        p Points
+      div.welcome.span5
+        h2 Welcome back, Brandon!
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt mauris eu nulla lacinia non faucibus risus sodales. Cras aspalan.
+      div#records.span4
+        ul
+          li.black black
+          li.silver silver
+          li.gold gold
+          li.platinum platinum
+          li.diamond diamond
+section#content
+  .container
+    #tease
+      h3 Win Free Movie Passes at 
+        span.next-level Gold Record Status 
+        a.prize-view-link(href="#allprizes") See All Prizes
+      p.subtle
+        strong Hint: 
+        | To earn more points try sharing on Facebook &mdash; 
+        a(href="#morehints") More Hints
+    ul.progress.progress-striped
+      li.bar(style="width:25%;")
+      li
+      li
+      li
+    ul.record-indicators
+      li.black black
+      li.silver silver
+      li.gold gold
+      li.platinum platinum
+      li.diamond diamond
+    .row
+      section.span5
+        h2 Activity Feed
+        .tabbable
+          ul.nav.nav-tabs
+            li: a(href="#my-activity", data-toggle="tab") My Activity
+            li: a(href="#group-activity", data-toggle="tab") Group Activity
+            li: a(href="#global-activity", data-toggle="tab") Everyone
+          div.tab-content
+            div.tab-pane.active#my-activity #TODO: My Activity
+            div.tab-pane#group-activity #TODO: Group Activity
+            div.tab-pane#global-activity #TODO: Everyone's Activity
+
+      section.span7#map
+        h2 #TODO: Implement Map
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+footer#footer
+  .container
+    p
+      a(href="#privacy") Privacy & Security 
+      || 
+      a(href="#terms") Terms 
+      || Copywrite 2012, Rock the Vote
