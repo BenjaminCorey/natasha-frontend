@@ -1,5 +1,114 @@
 // Apply a natural box layout model to all elements.
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
+
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+}
+.container {
+	box-sizing: content-box;
+	position: relative;
+}
+
+/**
+ * Font Families
+ */
+
+@serif: Georgia, serif;
+@sans : "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif;
+body {
+	font-family: @sans;
+}
+/**
+ * Header Styles
+ */
+
+#header {
+	background: #000;
+	color: #fff;
+	background-image: url('../img/texture-vinyl.jpg');
+	background-repeat: repeat-x;
+	.logo {
+		background: url('../img/logo-rockthevote.png') 0 10px no-repeat;
+		text-indent: -9999px;
+		height: 66px;
+	}
+}
+
+/**
+ * Banner Styles
+ */
+
+#banner {
+	padding-top: 40px;
+	background: url('../img/bg-banner.jpg') no-repeat;
+	background-size: cover;
+	border-bottom: 4px solid rgba(0,0,0,.25);
+
+	.container {
+		background: #fff url('../img/texture-paper.png') repeat repeat;
+		background-clip: padding-box;
+		border: 4px solid rgba(0,0,0,.25);
+		border-bottom: 1px solid rgba(255,255,255,.75);
+		border-radius: 2px;
+		margin-bottom: -5px;
+		padding-top: 65px;
+	}
+	.socialnav {
+		position: absolute;
+		top:0;
+		& > ul {
+			float: right;
+			list-style: none;
+			border-bottom: 1px solid rgba(0,0,0,.5);
+			box-shadow: 0 1px 0 white;
+			a {
+				color: white;
+				font-weight: bold;
+				text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+			}
+			& > li {
+				display: inline-block;
+				padding: 0 15px;
+				height: 45px;
+				line-height: 45px;
+				background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.1) 0%, transparent 50%, rgba(255,255,255,.05) 100% );
+				
+				&.avatar {
+					width: 45px;
+					padding: 0;
+					float: left;
+					img {display: block;margin:0; padding: 0;height: 100%;width: 100%;border:none;}	
+				}
+				&.email {
+					background-color: #45b263;
+				}
+				&.twitter {
+					background-color: #46b3eb;
+				}
+				&.facebook {
+					background-color: #4766a7;
+				}
+				&.dropdown {
+					background-color: #c1d1e0;
+					a {
+						color: #666;
+						text-shadow: 0 1px 0 rgba(255,255,255,.75);
+					}
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Content Styles
+ */
+
+#content {
+	.container {
+		background: #fff url('../img/texture-paper.png') repeat repeat;
+		background-clip: padding-box;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+	}
 }
