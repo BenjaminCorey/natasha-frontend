@@ -235,12 +235,66 @@ body {
 	}
 }
 
+#progress {
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  padding: 10px;
+  .border-radius(2px);
+  ul.progress {
+    margin: 0;
+    padding: 0;
+    .border-radius(0);
+    background-color: #e4e4e4;
+    height: 60px;
+    .bar {
+      height: 60px;
+    }
+  }
+}
+
+#activity {
+  ul.nav-tabs {
+    margin-bottom: 0;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    a {
+        border: 1px solid #ccc;
+        .border-radius(0);
+        margin-right: -1px;
+    }
+    li:not(.active){
+      a {
+        color: #aaa;
+        text-shadow: 0 1px 0 white;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.00)));
+        background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00) 12%);
+        background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00) 12%);
+        background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00) 12%);
+        background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00) 12%);
+        background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.00) 12%);
+      }  
+    }
+    
+    li.active {
+      position: relative;
+      z-index: 1;
+      a {
+        color: #29a2da;
+        border-bottom-color: transparent;
+        background-image: none;
+      }
+    }
+  }
+}
+
 .activity-feed {
   list-style: none;
   margin: 0;
   padding: 0;
   li {
     .clearfix;
+    position: relative;
     padding: 15px;
     background-color: white;
     border: 1px solid #ccc;
@@ -250,15 +304,16 @@ body {
     }
   }
   .feed-avatar {
-    float: left;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
     width: 55px;
     img {
       .square(40px);
     }
   }
   .feed-text {
-    float: left;
-    margin-left: 60px;
+    margin-left: 55px;
     p {
       margin: 0;
       padding: 0;

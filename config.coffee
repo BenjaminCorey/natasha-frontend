@@ -29,12 +29,12 @@ exports.config =
         ]
 
     stylesheets:
-      defaultExtension: 'styl'
+      defaultExtension: 'less'
       joinTo: 'stylesheets/app.css'
       order:
         before: ['vendor/styles/normalize.css']
         after: ['vendor/styles/helpers.css']
 
     templates:
-      defaultExtension: 'hbs'
+      defaultExtension: 'jade'
       joinTo: 'javascripts/app.js'
