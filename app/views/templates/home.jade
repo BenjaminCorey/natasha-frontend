@@ -5,7 +5,7 @@ header#header
 section#banner
   .container
     .row
-      nav.socialnav.span12
+      nav.socialnav
         ul
           li.avatar: img(src="/img/placeholder-avatar.png", alt="Avatar")
           li.email: a(href="#email") Email
@@ -15,17 +15,17 @@ section#banner
             ul.dropdown-menu
               li.pinterest: a(href="#pinterest") Pin it
               li.myspace: a(href="#myspace") Share on MySpace
-      
-      div.points.span3
+    .row
+      div.points
         .circle-outer
           .circle-inner
             p.first You Have
             p#points 990
             p.last Points
-      div.welcome.span5
+      div.welcome
         h2 Welcome back, Brandon!
         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt mauris eu nulla lacinia non faucibus risus sodales. Cras aspalan.
-      div#records.span4
+      div#records
         ul
           li.black: img(src="/img/record-black.png", alt="black record icon.")
           li.silver: img(src="/img/record-silver.png", alt="silver record icon.")
@@ -35,61 +35,120 @@ section#banner
 section#content
   .container
     #tease
-      h3 Win Free Movie Passes at 
-        span.next-level Gold Record Status 
-        a.prize-view-link(href="#allprizes") See All Prizes
-      p.subtle
-        strong Hint: 
-        | To earn more points try sharing on Facebook &mdash; 
-        a(href="#morehints") More Hints
+      .current-record-indicator
+        img(src="/img/record-black.png", alt="black record icon.")
+      .tease-text
+        h3 Win Free Movie Passes at 
+          span.next-level Gold Record Status 
+          a.prize-view-link(href="#allprizes") See All Prizes
+        p.subtle
+          strong Hint: 
+          | To earn more points try sharing on Facebook &mdash; 
+          a(href="#morehints") More Hints
     div#progress
       ul.progress.progress-striped
         li.bar(style="width:25%;")
         li
         li
         li
-    ul.record-indicators
-      li.black black
-      li.silver silver
-      li.gold gold
-      li.platinum platinum
-      li.diamond diamond
-    .row
-      section#activity.span5
-        h2 Activity Feed
-        .tabbable
-          ul.nav.nav-tabs
-            li.active: a(href="#my-activity", data-toggle="tab") My Activity
-            li: a(href="#group-activity", data-toggle="tab") Group Activity
-            li: a(href="#global-activity", data-toggle="tab") Everyone
-          div.tab-content
-            div.tab-pane.active#my-activity
-              ul.activity-feed
-                li
-                  div.feed-avatar
-                    img(src="../img/placeholder-avatar.png")
-                  div.feed-text
-                    p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
-                li
-                  div.feed-avatar
-                    img(src="../img/placeholder-avatar.png")
-                  div.feed-text
-                    p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
-                li
-                  div.feed-avatar
-                    img(src="../img/placeholder-avatar.png")
-                  div.feed-text
-                    p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
-                li
-                  div.feed-avatar
-                    img(src="../img/placeholder-avatar.png")
-                  div.feed-text
-                    p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
-            div.tab-pane#group-activity #TODO: Group Activity
-            div.tab-pane#global-activity #TODO: Everyone's Activity
+    //- TODO: Style Secondary Record Indicators
+      ul.record-indicators
+        li.black black
+        li.silver silver
+        li.gold gold
+        li.platinum platinum
+        li.diamond diamond
+    section#activity
+      h2.visuallyhidden Activity Feed
+      .tabbable
+        ul.nav.nav-tabs
+          li.active: a(href="#my-activity", data-toggle="tab") My Activity
+          li: a(href="#group-activity", data-toggle="tab") Group Activity
+          li: a(href="#global-activity", data-toggle="tab") Everyone
+        div.tab-content
+          div.tab-pane.active#my-activity
+            ul.activity-feed
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+          div.tab-pane#group-activity
+            ul.activity-feed
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
 
-      section.span7#map
-        img(src="/img/map-unitedstates.png", alt="Map of US Placeholder")
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+          div.tab-pane#global-activity
+            ul.activity-feed
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+              li
+                div.feed-avatar
+                  img(src="../img/placeholder-avatar.png")
+                div.feed-text
+                  p Your Facebook Friend Brandon in San Francisco, CA registered to vote!
+
+
+    section#map
+      img(src="/img/map-unitedstates.png", alt="Map of US Placeholder")
 footer#footer
   .container
     p.subtle

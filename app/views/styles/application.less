@@ -1,4 +1,5 @@
 @import './bootstrap/_bootstrap.less';
+@import './_grid.less';
 
 // Apply a natural box layout model to all elements.
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
@@ -101,6 +102,7 @@ body {
 	background: url('../img/bg-banner.jpg') no-repeat;
 	.background-size(cover);
 	border-bottom: 4px solid rgba(0,0,0,.25);
+  text-shadow: 0 1px 1px white;
 
 	.container {
 		background: #fff url('../img/texture-paper.png') repeat repeat;
@@ -200,9 +202,25 @@ body {
 			}
 		}
 	}
+
+  .welcome {
+    h2 {
+      font-weight: normal;
+      color: #4a4a4a;
+      font-size: 30px;
+    }
+    p {
+      color: #8b8b8b;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
   // Record Styles
-  div#records > ul {
+  #records > ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     & > li {
       display: inline-block;
       margin: 0 5px 5px 0;
@@ -234,25 +252,89 @@ body {
     padding-top: 30px;
 	}
 }
+#tease {
+  .clearfix();
+  margin-bottom: 10px;
+  .current-record-indicator {
+    .column(1);
+  }
+  .tease-text {
+    .column(11);
+    h3 {
+      font-family: @serif;
+      font-weight: normal;
+      font-size: 20px;
+      color: #4a4a4a;
+      text-shadow: 0 1px 0 #fff;
+      .next-level {
+        color: #5ec679;
+      }
+      a {
+        display: inline-block;
+        position: relative;
+        top: -2px;
+        padding: 0 8px;
+        font-family: @sans;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: bold;
+        background: #29a2da;
+        color: #fff;
+        text-shadow: none;
+      }
+    }
+  }
+}
 
 #progress {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   padding: 10px;
   .border-radius(2px);
+  margin-bottom: 40px;
   ul.progress {
+    position: relative;
     margin: 0;
     padding: 0;
     .border-radius(0);
-    background-color: #e4e4e4;
+    background: #e4e4e4;
+    .box-shadow(none);
     height: 60px;
+    border: 1px solid #c5c5c5;
+
     .bar {
       height: 60px;
+      position: relative;
+      z-index: 1;
+
+      border: 1px solid #53ae68;
+
+      background-color: #57bd72;
+      background-image: -webkit-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%), -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-image: -moz-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%), -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-image: -o-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%), -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-image: -ms-linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%), -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-image: linear-gradient(top, rgba(255,255,255,.15) 0%, rgba(0,0,0,.15) 100%), linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+
+      background-size: 60px 60px;
+
+      .box-shadow(inset 0 1px 0 rgba(255,255,255,.25))
+    }
+    li:not(:first-child){
+      position: relative;
+      display: inline-block;
+      height: 60px;
+      width: 25%;
+      left: 0;
+      top: -60px;
+      border-right: 1px solid #c5c5c5;
+      .box-shadow(1px 0 0 #ececec);
     }
   }
 }
 
 #activity {
+  margin-bottom: 10px;
   ul.nav-tabs {
     margin-bottom: 0;
     border: none;
@@ -323,6 +405,11 @@ body {
   }
 }
 
+#map {
+  text-align: center;
+  padding-top: 30px;
+}
+
 /**
  * Footer Styles
  */
@@ -331,11 +418,63 @@ body {
   .container {
     background: #fff url('../img/texture-paper.png') repeat repeat;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 20px 10px;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 0 white;
     a:link, a:visited {
       color: #828282;
       font-weight: bold;
       text-decoration: none;
     }
+  }
+}
+
+/**
+ * Media Queries
+ */
+
+@media screen and (min-width: 760px) {
+  .container {
+    width: 760px;
+  }
+  #banner {
+    .points {
+      .column(4);
+    }
+    .welcome {
+      .column(8);
+    }
+    #records {
+      .column(8);
+    }
+  }
+  #activity {
+    .column(6);
+  }
+  #map {
+    .column(6);
+  }
+}
+
+@media screen and (min-width: 1030px) {
+  .container {
+    width: 1030px;
+  }
+  #banner {
+    .points {
+      .column(3);
+    }
+    .welcome {
+      .column(5);
+    }
+    #records {
+      .column(4);
+    }
+  }
+  #activity {
+    .column(4);
+  }
+  #map {
+    .column(8);
   }
 }
