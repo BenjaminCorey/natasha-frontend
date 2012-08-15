@@ -1,5 +1,6 @@
-Application = require 'application'
+# Loads / instantiates the application
+window.app = require 'application'
 
+# Initializes the app once the DOM is ready
 $ ->
-  window.app = new Application()
-  Backbone.history.start()
+  window.app.init()

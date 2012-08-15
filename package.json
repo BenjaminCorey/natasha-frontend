@@ -1,12 +1,12 @@
 {
   "author": "Benjamin Wilkins",
-  "name": "Natasha - RTV Contesting Platform",
+  "name": "natasha-frontend",
   "description": "Natasha is a rewards system build on top of Rock the Vote's Online Voter Registration tool (aka, 'Rocky'), it is designed to work in concert with the updated frontend/proxy hosted at github.com/citizenengagementlab/Boris-Frontend.",
   "version": "0.0.1",
   "homepage": "www.rockthevote.com",
   "repository": {
     "type": "git",
-    "url": "github.com/benjamincorey/Natasha-frontend"
+    "url": ""
   },
   "engines": {
     "node": "~0.6.10"
