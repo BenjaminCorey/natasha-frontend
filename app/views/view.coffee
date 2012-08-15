@@ -6,9 +6,7 @@ module.exports = class View extends Backbone.View
 
     @model?.on       'destroy remove', @close
     @collection?.on  'destroy remove', @close
-
-    @render()
-
+    
   template: ->
     return
 

@@ -1,28 +1,27 @@
-section#banner
-  .container
-    nav.socialnav
-      ul
-        li.avatar: img(src="/img/placeholder-avatar.png", alt="Avatar")
-        li.email: a(href="#email") Email
-        li.twitter: a(href="#twitter") Tweet
-        li.facebook: a(href="#facebook") Share
-        li.dropdown: a(href="#more", class="dropdown-toggle", data-toggle="dropdown") More
-          ul.dropdown-menu
-            li.pinterest: a(href="#pinterest") Pin it
-            li.myspace: a(href="#myspace") Share on MySpace
-    div.points
-      .circle-outer
-        .circle-inner
-          p.first You Have
-          p#points 990
-          p.last Points
-    div.welcome
-      h2 Welcome back, Brandon!
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt mauris eu nulla lacinia non faucibus risus sodales. Cras aspalan.
-    div#records
-      ul
-        li.black: img(src="/img/record-black.png", alt="black record icon.")
-        li.silver: img(src="/img/record-silver.png", alt="silver record icon.")
-        li.gold: img(src="/img/record-gold.png", alt="gold record icon.")
-        li.platinum: img(src="/img/record-platinum.png", alt="platinum record icon.")
-        li.diamond: img(src="/img/record-diamond.png", alt="diamond record icon.")
+.container
+  nav.socialnav
+    ul
+      li.avatar: img(src="https://graph.facebook.com/#{fbid}/picture/?type=small", alt="Avatar")
+      li.email: a(href="#email") Email
+      li.twitter: a(href="#twitter") Tweet
+      li.facebook: a(href="#facebook") Share
+      li.dropdown: a(href="#more", class="dropdown-toggle", data-toggle="dropdown") More
+        ul.dropdown-menu
+          li.pinterest: a(href="#pinterest") Pin it
+          li.myspace: a(href="#myspace") Share on MySpace
+  div.points
+    .circle-outer
+      .circle-inner
+        p.first You Have
+        p#points #{points}
+        p.last Points
+  div.welcome
+    h2 Welcome back, #{first_name}!
+    p Share on your unique referral link to register your friends to vote. You earn points for every friend who registers and even just for sharing! You could win some pretty cool schwag.
+  div#records
+    ul
+      li.black: img(src="/img/record-black.png", alt="black record icon.")
+      li.silver: img(src="/img/record-silver.png", alt="silver record icon.")
+      li.gold: img(src="/img/record-gold.png", alt="gold record icon.")
+      li.platinum: img(src="/img/record-platinum.png", alt="platinum record icon.")
+      li.diamond: img(src="/img/record-diamond.png", alt="diamond record icon.")
